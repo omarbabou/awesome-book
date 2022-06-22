@@ -89,3 +89,15 @@ btn.addEventListener('click', () => {
     addNewBook();
   }
 });
+
+// Delete book
+
+booksContent.addEventListener('click', (e) => {
+  if (e.target.id === 'remove') {
+    const bookItem = e.target.parentElement;
+    booksContent.removeChild(bookItem);
+    const newBookArray = bookArray.filter((event) => event.id !== Number(bookItem.id));
+    bookArray = newBookArray;
+    localStorage.setItem('bookstore', JSON.stringify(bookArray));
+  }
+});
