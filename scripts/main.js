@@ -47,3 +47,14 @@ function getBook() {
       addNewBook(book);
     });
   }
+
+  // display available Contact
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('bookstore') === null) {
+      bookArray = [];
+    } else {
+      bookArray = JSON.parse(localStorage.getItem('bookstore'));
+      lastID(bookArray);
+    }
+    getBook();
+  });
