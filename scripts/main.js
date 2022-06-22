@@ -58,3 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     getBook();
   });
+
+  // clear inputs
+
+function clearInputs() {
+    bookName.value = '';
+    authName.value = '';
+  }
