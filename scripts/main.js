@@ -24,3 +24,19 @@ function lastID(bookArray) {
       id = 0;
     }
   }
+
+  // Add boooks to the DOM
+
+function addNewBook(item) {
+    const newAddDiv = document.createElement('div');
+    newAddDiv.classList.add('bookItem');
+    newAddDiv.id = item.id;
+    newAddDiv.innerHTML = `<ul class="book-content">
+                                
+                                <li>${item.bookName}</li>
+                                <li>${item.authName}</li>
+                            </ul>
+                            <button id="remove">Remove</button>
+    `;
+    booksContainer.appendChild(newAddDiv);
+  }
