@@ -15,7 +15,7 @@ clone repo: https://github.com/omarbabou/awesome-book.git
 
 ### Live
 
-To see live project go to: [Live_demo]
+[Live_demo]()
 ### Install
 
 run npm install to install dependencies.
