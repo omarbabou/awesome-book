@@ -1,5 +1,6 @@
 const booksContent = document.querySelector('.displayBook');
 const btn = document.getElementById('button');
+// eslint-disable-next-line no-unused-vars
 const bookTitle = document.getElementById('name');
 const authName = document.getElementById('author');
 
@@ -8,60 +9,83 @@ let id = 0;
 
 // oject constructor for contact
 
-function Book(id, bookName, authName) {
-    this.id = id;
-    this.bookName = bookName;
-    this.authName = authName;
-  }
+function Book(id, bookTitle, authName) {
+  this.id = id;
+  this.bookTitle = bookTitle;
+  this.authName = authName;
+}
 
-
-  // Find the last ID
+// Find the last ID
 
 function lastID(bookArray) {
-    if (bookArray.length > 0) {
-      id = bookArray[bookArray.length - 1].id;
-    } else {
-      id = 0;
-    }
+  if (bookArray.length > 0) {
+    id = bookArray[bookArray.length - 1].id;
+  } else {
+    id = 0;
   }
+}
 
-  // Add books to the DOM
+// Add books to the DOM
 
 function addNewBook(item) {
-    const newAddDiv = document.createElement('div');
-    newAddDiv.classList.add('bookItem');
-    newAddDiv.id = item.id;
-    newAddDiv.innerHTML = `<ul class="book-content">
+  const newAddDiv = document.createElement('div');
+  newAddDiv.classList.add('bookItem');
+  newAddDiv.id = item.id;
+  newAddDiv.innerHTML = `<ul class="book-content">
                                 
-                                <li>${item.bookName}</li>
+                                <li>${item.bookTitle}</li>
                                 <li>${item.authName}</li>
                             </ul>
                             <button id="remove">Remove</button>
     `;
-    booksContainer.appendChild(newAddDiv);
-  }
+  booksContent.appendChild(newAddDiv);
+}
 
-  // display bookstore
+// display bookstore
 function getBook() {
-    bookArray.forEach((book) => {
-      addNewBook(book);
-    });
-  }
-
-  // display available Contact
-document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('bookstore') === null) {
-      bookArray = [];
-    } else {
-      bookArray = JSON.parse(localStorage.getItem('bookstore'));
-      lastID(bookArray);
-    }
-    getBook();
+  bookArray.forEach((book) => {
+    addNewBook(book);
   });
+}
 
-  // clear inputs
+// display available Contact
+document.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('bookstore') === null) {
+    bookArray = [];
+  } else {
+    bookArray = JSON.parse(localStorage.getItem('bookstore'));
+    lastID(bookArray);
+  }
+  getBook();
+});
+
+// clear inputs
 
 function clearInputs() {
-    bookName.value = '';
-    authName.value = '';
+  bookTitle.value = '';
+  authName.value = '';
+}
+
+// checkInputs
+
+function checkInput(inputArr) {
+  for (let i = 0; i < inputArr.length; i += 1) {
+    if (inputArr[i].value === '') {
+      return false;
+    }
   }
+  return true;
+}
+
+// add book
+
+btn.addEventListener('click', () => {
+  if (checkInput([bookTitle, authName])) {
+    id += 1;
+    const book = new Book(id, bookTitle.value, authName.value);
+    bookArray.push(book);
+    localStorage.setItem('bookstore', JSON.stringify(bookArray));
+    clearInputs();
+    addNewBook();
+  }
+});
