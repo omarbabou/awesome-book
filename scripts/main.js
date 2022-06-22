@@ -25,7 +25,7 @@ function lastID(bookArray) {
     }
   }
 
-  // Add boooks to the DOM
+  // Add books to the DOM
 
 function addNewBook(item) {
     const newAddDiv = document.createElement('div');
@@ -39,4 +39,11 @@ function addNewBook(item) {
                             <button id="remove">Remove</button>
     `;
     booksContainer.appendChild(newAddDiv);
+  }
+
+  // display bookstore
+function getBook() {
+    bookArray.forEach((book) => {
+      addNewBook(book);
+    });
   }
