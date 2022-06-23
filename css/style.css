@@ -88,6 +88,17 @@ h2 {
   color: var(--container-color);
 }
 
+.about-me,
+.form,
+.home {
+  margin: 0 auto;
+  display: none;
+}
+
+.active {
+  display: flex;
+}
+
 .displayBook {
   width: 800px;
   margin: 3.5rem auto;
