@@ -54,3 +54,11 @@ btn.addEventListener('click', (e) => {
     displayBook(book);
   }
 });
+
+booksContent.addEventListener('click', (e) => {
+  if (e.target.id === 'remove') {
+    const element = e.target.parentNode;
+    bookList.removeBook(element.id);
+    element.remove();
+  }
+})
