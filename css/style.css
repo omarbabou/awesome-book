@@ -45,6 +45,23 @@ footer {
   position: absolute;
 }
 
+footer a {
+  color: #003138;
+  text-transform: uppercase;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+  color: var(--primary-color);
+}
+
+nav li {
+  cursor: pointer;
+}
+
 h1 {
   font-size: 42px;
   text-align: center;
@@ -53,7 +70,7 @@ h1 {
 }
 
 h1 span {
-  color: var(--primary-color-alt);
+  color: var(--primary-color);
 }
 
 h2 {
