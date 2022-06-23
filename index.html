@@ -14,16 +14,43 @@
     <title>Awesome Book</title>
   </head>
   <body>
-    <h1>Awesome <span>Book</span>Store</h1>
-    <div class="displayBook"></div>
+    <header>
+      <h1>Awesome <span>Book</span>Store</h1>
+      <nav>
+        <ul>
+          <li class="list">List</li>
+          <li class="add">Add Contact</li>
+          <li class="contact">Contact</li>
+        </ul>
+      </nav>
+    </header>
 
-    <h2>Add New Book</h2>
+    <span class="date"></span>
+
+    <h2>All Awesome Book</h2>
+
+    <div class="displayBook home window"></div>
+
     <form>
       <input type="text" name="name" id="title" placeholder="book title" />
       <input type="text" name="author" id="author" placeholder="author name" />
-      <button type="submit" id="button">Add</button>
+      <button type="submit" id="button">Add Book</button>
     </form>
+    <section class="about-me window">
+        <p>For any question or just want to contact me &#128522;<br>
+            You can reach out to me: </p>
 
-    <script defer src="app.js"></script>
+        <ul>
+            <li>My mail: <a href="mailto:obabou50@gmail.com">obabou50@gmail.com</a></li>
+            <li>My number: <a href="tel:+250789919479">+250789919478</a></li>
+            <li>My Linkedin: <a href="https://www.linkedin.com/in/idrissa-makoba-b5b906205/">Idriss Omar</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        Developed by <a href="https://github.com/omarbabou"> Idriss Omar Babou</a>
+     </footer>
+
+    <script defer src="scripts/app.js"></script>
   </body>
 </html>
