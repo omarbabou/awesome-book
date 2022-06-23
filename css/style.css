@@ -3,10 +3,31 @@
   padding: 0;
   box-sizing: border-box;
   list-style-type: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary-color: #fff;
+  --primary-color-alt: #9adaff;
+  --secondary-color: #b3e4ff;
+  --secondary-color-alt: #cdedff;
+  --container-color: #22afff;
 }
 
 body {
-  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+  background: var(--primary-color);
+}
+
+h1 {
+  font-size: 42px;
+  text-align: center;
+  font-weight: 900;
+  color: var(--container-color);
 }
 
 .bookItem {
