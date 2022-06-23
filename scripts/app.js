@@ -61,4 +61,4 @@ booksContent.addEventListener('click', (e) => {
     bookList.removeBook(element.id);
     element.remove();
   }
-})
+});
