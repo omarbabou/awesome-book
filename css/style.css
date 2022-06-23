@@ -8,10 +8,10 @@
 
 :root {
   --primary-color: #fff;
-  --primary-color-alt: #9adaff;
+  --primary-color-alt: #22afff;
   --secondary-color: #d2efff;
   --secondary-color-alt: #cdedff;
-  --container-color: #22afff;
+  --container-color: #5dc5ff;
 }
 
 body {
@@ -44,7 +44,7 @@ h2 {
 .displayBook {
   width: 800px;
   margin: 3.5rem auto;
-  border: 2px solid #70ccff;
+  border: 2px solid #98daff;
 }
 
 .bookItem {
@@ -93,16 +93,25 @@ h2 {
 form {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 200px;
+  justify-content: center;
+  align-items: center;
 }
 
-form input {
-  margin: 0.5rem 0;
-  height: 30px;
-  padding: 5px;
+input {
+  margin: 1.2rem;
+  width: 400px;
+  height: 50px;
+  padding: 10px;
+  border: 2px solid #98daff;
+  outline: none;
 }
 
 #button {
-  width: 60px;
+  width: 180px;
+  height: 40px;
+  border: none;
+  color: var(--primary-color);
+  background-color: var(--primary-color-alt);
+  font-size: 18px;
+  border-radius: 6px;
 }
