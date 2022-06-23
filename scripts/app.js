@@ -23,7 +23,7 @@ const newBooks = bookList.bookArray;
 
 function displayBook(book) {
   const newAddDiv = document.createElement('div');
-  const booksContainer = document.querySelector('.displayBook');
+  const booksContent = document.querySelector('.displayBook');
   newAddDiv.classList.add('bookItem');
   newAddDiv.id = book.id;
   newAddDiv.innerHTML = `<ul class="book-content">   
@@ -32,5 +32,25 @@ function displayBook(book) {
                           </ul>
                           <button id="remove">Remove</button>
   `;
-  booksContainer.appendChild(newAddDiv);
+  booksContent.appendChild(newAddDiv);
 }
+
+newBooks.forEach((book) => {
+  displayBook(book);
+});
+
+btn.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (title.value !== '' || author.value !== '') {
+    const id = Date.now();
+    const book = {
+      id,
+      title: title.value,
+      author: author.value,
+    };
+    title.value = '';
+    author.value = '';
+    bookList.addNewBook(book);
+    displayBook(book);
+  }
+});
