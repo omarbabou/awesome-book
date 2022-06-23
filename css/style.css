@@ -46,6 +46,22 @@ h1 span {
   padding: 10px 2rem;
 }
 
+.bookItem,
+.book-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.bookItem:nth-child(odd) {
+  background-color: var(--secondary-color);
+}
+
+.bookItem:nth-child(even) {
+  background-color: var(--secondary-color-alt);
+}
+
 form {
   display: flex;
   flex-direction: column;
