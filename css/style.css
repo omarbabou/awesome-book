@@ -11,7 +11,7 @@
   --primary-color-alt: #22afff;
   --secondary-color: #d2efff;
   --secondary-color-alt: #cdedff;
-  --container-color: #5dc5ff;
+  --container-color: #006198;
 }
 
 body {
@@ -19,7 +19,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem 0;
+  padding: 0 0;
   background: var(--primary-color);
 }
 
@@ -33,7 +33,7 @@ header {
 }
 
 footer {
-  color: #003138;
+  color: #006198;
   background-color: var(--secondary-color);
   height: 80px;
   text-align: center;
@@ -46,7 +46,7 @@ footer {
 }
 
 footer a {
-  color: #003138;
+  color: #006198;
   text-transform: uppercase;
 }
 
@@ -74,7 +74,7 @@ h1 span {
 }
 
 h2 {
-  color: #003138;
+  color: #006198;
   text-align: center;
   font-size: 26px;
   padding-bottom: 1.5rem;
@@ -99,10 +99,11 @@ h2 {
   display: flex;
 }
 
-.displayBook {
+.home {
   width: 800px;
-  margin: 3.5rem auto;
-  border: 2px solid #98daff;
+  flex: 1;
+  display: block;
+  box-shadow: 1px 3px 10px #ecfffe;
 }
 
 .bookItem {
@@ -132,9 +133,14 @@ h2 {
   text-align: start;
 }
 
+section li {
+  list-style-type: square;
+  color: #006198;
+}
+
 .book-content li {
   width: 50%;
-  color: #003138;
+  color: #006198;
   border-right: 2px solid #70ccff;
   margin-right: 20px;
 }
@@ -171,5 +177,25 @@ input {
   color: var(--primary-color);
   background-color: var(--primary-color-alt);
   font-size: 18px;
+  margin-top: 1rem;
   border-radius: 6px;
+}
+
+section {
+  margin: 0 auto;
+  padding: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section ul {
+  margin-left: 3rem;
+  margin-top: 2rem;
+}
+
+section p,
+section a {
+  color: #006198;
+  font-size: 18px;
+  text-decoration: none;
 }

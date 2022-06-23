@@ -13,12 +13,12 @@ navLink.forEach((link) => {
       home.style.display = 'none';
       newContact.classList.add('active');
       document.querySelector('h2').textContent = 'Add new Contact';
-    } else if (link.classList.contains('contact-me')) {
+    } else if (link.classList.contains('contact')) {
       displayWindow(link);
       const aboutMe = document.querySelector('.about-me');
       home.style.display = 'none';
       aboutMe.classList.add('active');
-      document.querySelector('h2').textContent = 'Contact';
+      document.querySelector('h2').textContent = 'Contact me';
     } else {
       displayWindow(link);
       home.style.display = 'block';
