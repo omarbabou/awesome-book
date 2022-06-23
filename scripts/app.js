@@ -13,3 +13,10 @@ class Library {
     localStorage.setItem('bookstore', JSON.stringify(this.bookArray));
   }
 }
+
+const booksContainer = document.querySelector('.displayBook');
+const btn = document.getElementById('button');
+const title = document.getElementById('title');
+const author = document.getElementById('author');
+const bookList = new Library();
+const newBooks = bookList.bookArray;
