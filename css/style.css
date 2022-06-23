@@ -23,6 +23,28 @@ body {
   background: var(--primary-color);
 }
 
+header {
+  width: 100%;
+  background-color: var(--primary-color-alt);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+footer {
+  color: #003138;
+  background-color: var(--secondary-color);
+  height: 80px;
+  text-align: center;
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+}
+
 h1 {
   font-size: 42px;
   text-align: center;
