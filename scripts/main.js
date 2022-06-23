@@ -7,12 +7,12 @@ const displayWindow = () => {
 
 navLink.forEach((link) => {
   link.addEventListener('click', () => {
-    if (link.classList.contains('add')) {
+    if (link.classList.contains('add-new-book')) {
       displayWindow(link);
       const newContact = document.querySelector('.form');
       home.style.display = 'none';
       newContact.classList.add('active');
-      document.querySelector('h2').textContent = 'Add new Contact';
+      document.querySelector('h2').addNewBook = 'Add new Contact';
     } else if (link.classList.contains('contact')) {
       displayWindow(link);
       const aboutMe = document.querySelector('.about-me');

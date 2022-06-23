@@ -48,6 +48,7 @@ footer {
 footer a {
   color: #006198;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 nav ul {
