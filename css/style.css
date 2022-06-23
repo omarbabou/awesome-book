@@ -3,32 +3,115 @@
   padding: 0;
   box-sizing: border-box;
   list-style-type: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary-color: #fff;
+  --primary-color-alt: #22afff;
+  --secondary-color: #d2efff;
+  --secondary-color-alt: #cdedff;
+  --container-color: #5dc5ff;
 }
 
 body {
-  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+  background: var(--primary-color);
+}
+
+h1 {
+  font-size: 42px;
+  text-align: center;
+  font-weight: 900;
+  color: var(--container-color);
+}
+
+h1 span {
+  color: var(--primary-color-alt);
+}
+
+h2 {
+  color: #003138;
+  text-align: center;
+  font-size: 26px;
+  padding-bottom: 1.5rem;
+}
+
+.displayBook {
+  width: 800px;
+  margin: 3.5rem auto;
+  border: 2px solid #98daff;
 }
 
 .bookItem {
-  margin-bottom: 0.5rem;
-  border-bottom: 1px solid #636363;
-  padding: 10px;
-  width: 40%;
+  width: 100%;
+  height: 60px;
+  padding: 10px 2rem;
+}
+
+.bookItem,
+.book-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.bookItem:nth-child(odd) {
+  background-color: var(--secondary-color);
+}
+
+.bookItem:nth-child(even) {
+  background-color: var(--secondary-color-alt);
+}
+
+.book-content {
+  width: 70%;
+  text-align: start;
+}
+
+.book-content li {
+  width: 50%;
+  color: #003138;
+  border-right: 2px solid #70ccff;
+  margin-right: 20px;
+}
+
+#remove {
+  width: 100px;
+  height: 30px;
+  color: var(--container-color);
+  border: none;
+  background-color: var(--primary-color);
+  border-radius: 4px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 200px;
+  justify-content: center;
+  align-items: center;
 }
 
-form input {
-  margin: 0.5rem 0;
-  height: 30px;
-  padding: 5px;
+input {
+  margin: 1.2rem;
+  width: 400px;
+  height: 50px;
+  padding: 10px;
+  border: 2px solid #98daff;
+  outline: none;
 }
 
 #button {
-  width: 60px;
+  width: 180px;
+  height: 40px;
+  border: none;
+  color: var(--primary-color);
+  background-color: var(--primary-color-alt);
+  font-size: 18px;
+  border-radius: 6px;
 }
