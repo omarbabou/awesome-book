@@ -11,7 +11,7 @@
   --primary-color-alt: #22afff;
   --secondary-color: #d2efff;
   --secondary-color-alt: #cdedff;
-  --container-color: #5dc5ff;
+  --container-color: #006198;
 }
 
 body {
@@ -19,8 +19,48 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem 0;
+  padding: 0 0;
   background: var(--primary-color);
+}
+
+header {
+  width: 100%;
+  background-color: var(--primary-color-alt);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+footer {
+  color: #006198;
+  background-color: var(--secondary-color);
+  height: 80px;
+  text-align: center;
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+}
+
+footer a {
+  color: #006198;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+  color: var(--primary-color);
+}
+
+nav li {
+  cursor: pointer;
 }
 
 h1 {
@@ -31,20 +71,40 @@ h1 {
 }
 
 h1 span {
-  color: var(--primary-color-alt);
+  color: var(--primary-color);
 }
 
 h2 {
-  color: #003138;
+  color: #006198;
   text-align: center;
   font-size: 26px;
   padding-bottom: 1.5rem;
 }
 
-.displayBook {
+.date {
+  width: 100%;
+  font-size: 11px;
+  text-align: right;
+  padding: 1.5rem 5rem;
+  color: var(--container-color);
+}
+
+.about-me,
+.form,
+.home {
+  margin: 0 auto;
+  display: none;
+}
+
+.active {
+  display: flex;
+}
+
+.home {
   width: 800px;
-  margin: 3.5rem auto;
-  border: 2px solid #98daff;
+  flex: 1;
+  display: block;
+  box-shadow: 1px 3px 10px #ecfffe;
 }
 
 .bookItem {
@@ -74,9 +134,14 @@ h2 {
   text-align: start;
 }
 
+section li {
+  list-style-type: square;
+  color: #006198;
+}
+
 .book-content li {
   width: 50%;
-  color: #003138;
+  color: #006198;
   border-right: 2px solid #70ccff;
   margin-right: 20px;
 }
@@ -113,5 +178,25 @@ input {
   color: var(--primary-color);
   background-color: var(--primary-color-alt);
   font-size: 18px;
+  margin-top: 1rem;
   border-radius: 6px;
+}
+
+section {
+  margin: 0 auto;
+  padding: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section ul {
+  margin-left: 3rem;
+  margin-top: 2rem;
+}
+
+section p,
+section a {
+  color: #006198;
+  font-size: 18px;
+  text-decoration: none;
 }
